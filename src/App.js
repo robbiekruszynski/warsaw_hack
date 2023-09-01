@@ -1,6 +1,7 @@
+import { Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useMode, ColorModeContext } from './GlobalTheme';
-// import Topbar from "./constants/Topbar";
+import Topbar from "./constants/TopBar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -11,6 +12,7 @@ function App() {
       <CssBaseline/>
       <div className = 'app'>
         <main className="content">
+          <Topbar/>
         </main>
         <p>ETHWARSAW</p>
       </div>
@@ -20,3 +22,4 @@ function App() {
 }
 
 export default App;
+  

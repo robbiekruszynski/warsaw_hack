@@ -53,7 +53,7 @@ export const coloring = (mode) => ({
             100: "#dbdbe0",
         },
         //light grey 
-        grayish: {
+        lightgray: {
             900: "#272727",
             800: "#4e4e4e",
             700: "#757575",
@@ -101,7 +101,7 @@ export const coloring = (mode) => ({
             800: "#a5a5a6",
             900: "#d2d2d2",
         },
-        //grey
+        
         gray: {
             100: "#1e1d1e",
             200: "#3b3b3c",
@@ -125,8 +125,8 @@ export const coloring = (mode) => ({
             800: "#b7b7c1",
             900: "#dbdbe0",
         },
-        //light grey 
-        grayish: {
+        //light gray
+        lightgray: {
             100: "#272727",
             200: "#4e4e4e",
             300: "#757575",
@@ -170,7 +170,7 @@ export const themeSettings = (mode) => {
             neutral: {
               dark: colors.gray[700],
               main: colors.gray[500],
-              light: colors.gray[100],
+              light: colors.gray[200],
             },
             background: {
               default: colors.primary[500],
@@ -187,10 +187,10 @@ export const themeSettings = (mode) => {
             neutral: {
               dark: colors.gray[700],
               main: colors.gray[500],
-              light: colors.gray[100],
+              light: colors.gray[200],
             },
             background: {
-              default: "#fcfcfc",
+                default: colors.primary[100],
             },
           }),
     },
@@ -225,7 +225,6 @@ export const themeSettings = (mode) => {
   };
 };
 
-// context for color mode
 export const ColorModeContext = createContext({
   toggleColorMode: () => {},
 });
