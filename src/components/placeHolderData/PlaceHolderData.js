@@ -1,5 +1,6 @@
 import { coloring } from "../../GlobalTheme";
-
+// require('dotenv').config();
+// import 'dotenv/config'
 
 export const mockData = [
   {

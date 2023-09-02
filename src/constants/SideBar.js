@@ -128,6 +128,20 @@ return (
             selected={selected}
             setSelected={setSelected}
           />
+             <Item
+            title="Insurance"
+            to="/insurance"
+            icon={<HelpOutlineOutlinedIcon />}
+            selected={selected}
+            setSelected={setSelected}
+          />
+             <Item
+            title="Swap"
+            to="/swap"
+            icon={<HelpOutlineOutlinedIcon />}
+            selected={selected}
+            setSelected={setSelected}
+          />
 
           <Typography
             variant="h5"
