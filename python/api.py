@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
 import insurance
+import swap
+import oracle
 
 app = Flask(__name__)
 
@@ -14,13 +16,22 @@ def calculate_insurance():
     response = insurance.quote(n_days, n_vals, deductible_val, deductible_type)
     return jsonify(response)
 
+@app.route('/calculate_swap', methods=['POST'])
+def calculate_swap():
+    data = request.json
+    n_days = data.get('days', 0)
+    n_vals = data.get('vals', 0)
+    
+    response = swap.quote(n_days, n_vals)
+    return jsonify(response)
+
 @app.route('/get_rate', methods=['GET'])
 def get_rate():
     try:
         # If deep enough history is available, use chronicle
-        rate = insurance.get_wsteth_rate_from_chronicle()
+        rate = oracle.get_wsteth_rate_from_chronicle()
     except:
-        rate = insurance.get_wsteth_rate_from_mainnet()
+        rate = oracle.get_wsteth_rate_from_mainnet()
     return jsonify({'yield': rate})
 
 if __name__ == "__main__":
