@@ -16,8 +16,8 @@ const Invoice = () => {
       cellClassName: "name-column--cell",
     },
     {
-      field: "wallet address",
-      headerName: "wallet address",
+      field: "wallet",
+      headerName: "Wallet address",
       flex: 1,
     },
     {
