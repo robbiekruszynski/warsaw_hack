@@ -1,6 +1,5 @@
 import numpy as np
 from scipy.stats import norm
-import json
 
 def quote(n_days: int, n_vals: int, deductible_val: float = 0, deductible_type: str = 'eth'):
     """
@@ -88,7 +87,7 @@ def quote(n_days: int, n_vals: int, deductible_val: float = 0, deductible_type: 
     print(f"Expected covered APY:    {round((expected_total_return_all_days - premium) / (n_vals * 32) * (365.25/n_days) * 100, 3)}%")
     return {
         'returns': {
-            'total': expected_total_return_all_days,
+            'gross': expected_total_return_all_days,
             'max': upper_bound,
             'min': expected_total_return_all_days - deductible,
             'covered': expected_total_return_all_days - premium
@@ -101,9 +100,9 @@ def quote(n_days: int, n_vals: int, deductible_val: float = 0, deductible_type: 
             'premium': premium,
             'deductible': deductible,
             'maxPayout': payout_amount,
+            'maxPayback': 0,
         }
     }
-
 
 if __name__ == "__main__":
     quote('insurance', n_days = 100, n_vals = 100, deductible_val = 0.05, deductible_type = 'pct')
