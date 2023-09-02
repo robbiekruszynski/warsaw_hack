@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 Start flask server
 ```bash
-python python/api.py
+python python/app.py
 ```
 
 ### Sample Flask endpoints:
