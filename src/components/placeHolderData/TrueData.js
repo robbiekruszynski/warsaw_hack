@@ -1,7 +1,7 @@
 // import { coloring } from "../../GlobalTheme";
 
 
-export const trueBar = [
+export const trueLine = [
     {
         "period": 1004,
         "periodStartTime": "2023-09-01T00:00:00Z",
