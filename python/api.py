@@ -14,5 +14,14 @@ def calculate_insurance():
     response = insurance.quote(n_days, n_vals, deductible_val, deductible_type)
     return jsonify(response)
 
+@app.route('/get_rate', methods=['GET'])
+def get_rate():
+    try:
+        # If deep enough history is available, use chronicle
+        rate = insurance.get_wsteth_rate_from_chronicle()
+    except:
+        rate = insurance.get_wsteth_rate_from_mainnet()
+    return jsonify({'yield': rate})
+
 if __name__ == "__main__":
     app.run(port=5000)

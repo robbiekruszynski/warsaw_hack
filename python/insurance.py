@@ -132,7 +132,7 @@ def get_wsteth_rate_from_mainnet():
     wsteth_contract = w3.eth.contract(WSTETH_CONTRACT, abi=WSTETH_ABI)
     rate = wsteth_contract.functions.stEthPerToken().call(block_identifier=block)/1e18
     rate_30d = wsteth_contract.functions.stEthPerToken().call(block_identifier=block_30d)/1e18
-    return (rate-rate_30d)*(365.25/30)/0.9
+    return (rate-rate_30d)*(365.25/30) / 0.9 # annualize and reapply 10% Lido fee
 
 def get_wsteth_rate_from_chronicle():
     node_url = NODE_SEPOLIA
@@ -147,7 +147,7 @@ def get_wsteth_rate_from_chronicle():
         eth_price = cp_eth_contract.caller(transaction={'from': '0x0048d6225D1F3eA4385627eFDC5B4709Cab4A21c'}, block_identifier=block).tryRead()[1]
         wsteth_price = cp_wsteth_contract.caller(transaction={'from': '0xf9423e34eA3fF46a6f6EF42Cf9821aF9A55cEa82'}, block_identifier=block).tryRead()[1]
         ratios.append(wsteth_price / eth_price)
-    return (ratios[0]-ratios[1])*(BLOCKS_PER_YEAR / (block_30d - block))
+    return (ratios[0]-ratios[1])*(BLOCKS_PER_YEAR / (block_30d - block)) / 0.9 # annualize and reapply 10% Lido fee
 
 if __name__ == "__main__":
     quote('insurance', n_days = 100, n_vals = 100, deductible_val = 0.05, deductible_type = 'pct')
