@@ -22,8 +22,10 @@ def calculate_swap():
     n_days = data.get('days', 0)
     n_vals = data.get('vals', 0)
     
-    response = swap.quote(n_days, n_vals)
-    return jsonify(response)
+    response = jsonify(swap.quote(n_days, n_vals))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    
+    return response
 
 @app.route('/get_rate', methods=['GET'])
 def get_rate():
@@ -32,7 +34,10 @@ def get_rate():
         rate = oracle.get_wsteth_rate_from_chronicle()
     except:
         rate = oracle.get_wsteth_rate_from_mainnet()
-    return jsonify({'yield': rate})
+    response = jsonify({'yield': rate})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
+    return response
 
 if __name__ == "__main__":
     app.run(port=5000)
