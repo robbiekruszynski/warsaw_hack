@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useMode, ColorModeContext } from './GlobalTheme';
-import Topbar from "./constants/TopBar";
+import Dashboard from './area/dashboard/Dashboard';
+import Topbar from "./area/constants/TopBar";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -13,8 +14,10 @@ function App() {
       <div className = 'app'>
         <main className="content">
           <Topbar/>
+          <Routes>
+          <Route path="/"element = {<Dashboard/>} />
+          </Routes>
         </main>
-        <p>ETHWARSAW</p>
       </div>
    </ThemeProvider>
     </ColorModeContext.Provider>

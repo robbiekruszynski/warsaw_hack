@@ -1,6 +1,6 @@
 import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
-import { ColorModeContext, coloring } from "../GlobalTheme";
+import { ColorModeContext, coloring } from "../../GlobalTheme";
 import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -15,7 +15,7 @@ const Topbar = () => {
     <Box display="flex" justifyContent="space-between" p={2}>
       <Box
         display="flex"
-        backgroundColor={colors.primary[400]}
+        backgroundColor={colors.green[800]}
         borderRadius="3px"
       >
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
@@ -33,6 +33,7 @@ const Topbar = () => {
         </IconButton>
       </Box>
     </Box>
+    //fix the break occuring when switching to light and check on no primary naming conventions for color changes
   );
 };
 
