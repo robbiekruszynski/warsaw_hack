@@ -70,13 +70,33 @@ export const mockPie = [
   },
 ];
 
-const mockLineTemp = await fetch('https://svc.blockdaemon.com/reporting/staking/v1/ethereum/mainnet/periods/12', 
-[
-    ['Authorization','Bearer <BEARER>']
-]  
+const mockLineTemp = await fetch('https://svc.blockdaemon.com/reporting/staking/v1/ethereum/mainnet/periods/8', 
+{
+  headers: {"Authorization":'Bearer <BEARERTK>'}
+}  
 ).then((response) => response.json());
 
 export const mockLine = mockLineTemp;
+
+
+
+
+var raw = JSON.stringify({
+  "days": 100,
+  "vals": 100
+});
+
+export const mockSwaps = await fetch('http://localhost:5000/calculate_swap', 
+{ 
+  method: 'POST',
+  headers: {
+    "Content-Type":'application/json',
+  },
+  body: raw,
+  redirect: 'follow'
+} 
+).then((response) => response.text());
+
 
 
 export const mockBar = [
