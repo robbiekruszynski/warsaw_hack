@@ -72,7 +72,7 @@ export const mockPie = [
 
 const mockLineTemp = await fetch('https://svc.blockdaemon.com/reporting/staking/v1/ethereum/mainnet/periods/8', 
 {
-  headers: {"Authorization":'Bearer <BEARERTK>'}
+  headers: {"Authorization":'Bearer mTWZ46f2YRFkCbSA3AwIRpCoksF2K81zjEVdaZHLsFBv50Uu'}
 }  
 ).then((response) => response.json());
 
@@ -95,7 +95,7 @@ export const mockSwaps = await fetch('http://localhost:5000/calculate_swap',
   body: raw,
   redirect: 'follow'
 } 
-).then((response) => response.text());
+).then((response) => response.json());
 
 
 

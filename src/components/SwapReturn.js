@@ -45,9 +45,9 @@ const SwapReturn = () => {
   }, []);
 
   return (
-    <Container>
-      <Typography variant="h4" component="h1" gutterBottom>
-        Token Swap Data
+    <Container className="cheatcode" sx={{ display: 'none' }}>
+      <Typography variant="h4" component="h1" gutterBottom padding="30px 0 15px 0">
+        Token Swap Details -&gt;
       </Typography>
       {data && (
         <>

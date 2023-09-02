@@ -27,6 +27,7 @@ function Swap() {
   const handleSubmit = () => {
     // Do something with the form data, e.g., send it to an API
     console.log(formData);
+    document.getElementsByClassName("cheatcode")[0].style.display = 'block';
   };
 
   return (
