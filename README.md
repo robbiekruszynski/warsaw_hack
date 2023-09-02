@@ -19,13 +19,31 @@ Our insurance contract allows a staker to cover any downside stochastic risk. Th
 
 ## Quickstart:
 
-Install python packages
+Install python packages (built on Python 3.10.0)
 ```
 python -m venv venv
 source venv/bin/activate
+pip install -r requirements.txt
 ```
 
 Start flask server
 ```bash
 python python/api.py
+```
+
+### Sample Flask endpoints:
+
+Query 30d yield of ETH staking
+```bash
+curl -X GET -H "Content-Type: application/json" http://localhost:5000/get_rate
+```
+
+Calculate value of a swap
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"days": 100, "vals": 100}' http://localhost:5000/calculate_swap
+```
+
+Calculate value of an insurance contract
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"days": 100, "vals": 100, "deductible_amount": 1, "deductible_type": "eth"}' http://localhost:5000/calculate_insurance
 ```
