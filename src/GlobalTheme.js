@@ -177,7 +177,7 @@ export const themeSettings = (mode) => {
             },
           }
         : {
-            // light mode
+            // light mode (broken)
             primary: {
               main: colors.primary[100],
             },

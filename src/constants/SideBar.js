@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { coloring } from "../GlobalTheme";
 import { Link } from 'react-router-dom';
+import "react-pro-sidebar/dist/css/styles.css";
 import {Box, IconButton, Typography, useTheme } from '@mui/material';
 import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
@@ -54,17 +55,15 @@ return (
         padding: "10px 35px 5px 20px !important",
       },
       "& .pro-inner-item:hover": {
-        color: "#0b5c66 !important",
+        color: "#1be7ff !important",
       },
       "& .pro-menu-item.active": {
-        color: "#6870fa !important",
+        color: "#1be7ff  !important",
       },
     }}
   >
     <ProSidebar collapsed={isCollapsed}>
       <Menu iconShape="square">
-
-        {/* LOGO AND MENU ICON */}
         <MenuItem
           onClick={() => setIsCollapsed(!isCollapsed)}
           icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
@@ -80,9 +79,7 @@ return (
               alignItems="center"
               ml="15px"
             >
-              {/* <Typography variant="h3" color={colors.gray[100]}>
-                USER
-              </Typography> */}
+           
               <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                 <MenuOutlinedIcon />
               </IconButton>
@@ -107,7 +104,7 @@ return (
                 variant="h3"
                 color={colors.gray[100]}
                 fontWeight="bold"
-                sx={{ m: "10px 0 0 -30px" }}
+                sx={{ m: "10px 0 0 0" }}
               >
                 Big Yoshi
               </Typography>
@@ -132,33 +129,12 @@ return (
           />
 
           <Typography
-            variant="h4"
-            color={colors.gray[300]}
-            sx={{ m: "15px 0 20px 0px" }}
+            variant="h5"
+            color={colors.green[500]}
+            sx={{ m: "15px 0 5px 20px" }}
           >
             Data
           </Typography>
-          {/* <Item
-            title="Manage Team"
-            to="/team"
-            icon={<PeopleOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          /> */}
-          {/* <Item
-            title="Balances"
-            to="/bal"
-            icon={<ReceiptOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          /> */}
-          {/* <Item
-            title="Profile Form"
-            to="/form"
-            icon={<PersonOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          /> */}
           <Item
             title="Cal"
             to="/cal"
@@ -166,13 +142,6 @@ return (
             selected={selected}
             setSelected={setSelected}
           />
-          <Typography
-            variant="h5"
-            color={colors.gray[300]}
-            sx={{ m: "15px 0 5px 00px" }}
-          >
-            Charts
-          </Typography>
           <Item
             title="Bar"
             to="/bar"
