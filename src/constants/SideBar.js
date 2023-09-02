@@ -78,7 +78,7 @@ return (
               display="flex"
               justifyContent="space-between"
               alignItems="center"
-              ml="15px"
+              ml="5px"
             >
            
               <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
@@ -171,13 +171,7 @@ return (
             selected={selected}
             setSelected={setSelected}
           />
-          <Item
-            title="Geo"
-            to="/geo"
-            icon={<MapOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          />
+       
         </Box>
         
       </Menu>
@@ -187,3 +181,12 @@ return (
 };
 
 export default SideBar;
+
+
+{/* <Item
+title="Geo"
+to="/geo"
+icon={<MapOutlinedIcon />}
+selected={selected}
+setSelected={setSelected}
+/> */}

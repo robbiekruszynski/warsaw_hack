@@ -2,6 +2,7 @@ import { useTheme } from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
 import { coloring } from "../../GlobalTheme";
 import { mockBar as data } from "../../components/placeHolderData/PlaceHolderData";
+// import { trueBar as data } from "../../components/placeHolderData/TrueData";
 
 const BarChart = ({ isDashboard = false }) => {
   const theme = useTheme();
@@ -39,8 +40,8 @@ const BarChart = ({ isDashboard = false }) => {
           },
         },
       }}
-      keys={["musesli", "tapas", "kebab", "pickles"]}
-      indexBy="country"
+      keys={["asd", "qwe", "wer", "ert"]}
+      indexBy="periodStartTime"
       margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
       padding={0.3}
       valueScale={{ type: "linear" }}
@@ -76,7 +77,7 @@ const BarChart = ({ isDashboard = false }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "country", // changed
+        legend: isDashboard ? undefined : "country",
         legendPosition: "middle",
         legendOffset: 32,
       }}
@@ -84,7 +85,7 @@ const BarChart = ({ isDashboard = false }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "food", // changed
+        legend: isDashboard ? undefined : "food",
         legendPosition: "middle",
         legendOffset: -40,
       }}
@@ -121,7 +122,7 @@ const BarChart = ({ isDashboard = false }) => {
       ]}
       role="application"
       barAriaLabel={function (e) {
-        return e.id + ": " + e.formattedValue + " in country: " + e.indexValue;
+        return e.id + ": " + e.formattedValue + " find this " + e.indexValue;
       }}
     />
   );

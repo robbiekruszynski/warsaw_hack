@@ -55,10 +55,10 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <Stat
-            title="12,361"
-            subtitle="Emails Sent"
+            title="27"
+            subtitle="Invoices sent this month"
             progress="0.75"
-            increase="+14%"
+            increase="+8%"
             icon={
               <EmailIcon
                 sx={{ color: colors.green[600], fontSize: "26px" }}
@@ -143,14 +143,13 @@ const Dashboard = () => {
                 fontWeight="600"
                 color={colors.gray[100]}
               >
-                Revenue Generated
+                Yield over Time Reward/Stake
               </Typography>
               <Typography
                 variant="h3"
                 fontWeight="bold"
                 color={colors.green[500]}
               >
-                $59,342.32
               </Typography>
             </Box>
             <Box>
@@ -194,7 +193,7 @@ const Dashboard = () => {
             >
               <Box>
                 <Typography
-                  color={colors.lightBlue[500]}
+                  color={colors.lime[800]}
                   variant="h5"
                   fontWeight="600"
                 >
@@ -206,7 +205,7 @@ const Dashboard = () => {
               </Box>
               <Box color={colors.gray[100]}>{transaction.date}</Box>
               <Box
-                backgroundColor={colors.green[500]}
+                backgroundColor={colors.lime[300]}
                 p="5px 10px"
                 borderRadius="4px"
               >
@@ -224,7 +223,7 @@ const Dashboard = () => {
           p="30px"
         >
           <Typography variant="h5" fontWeight="600">
-            Campaign
+            Distribution
           </Typography>
           <Box
             display="flex"
@@ -238,9 +237,8 @@ const Dashboard = () => {
               color={colors.lightBlue[500]}
               sx={{ mt: "15px" }}
             >
-              $48,352 revenue generated
+              place holder
             </Typography>
-            <Typography>Includes extra misc expenditures and costs</Typography>
           </Box>
         </Box>
         <Box

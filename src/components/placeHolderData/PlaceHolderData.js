@@ -1,3 +1,5 @@
+import { coloring } from "../../GlobalTheme";
+
 
 export const mockData = [
   {
@@ -15,10 +17,133 @@ export const mockData = [
 export const mockTransactions = [
     {
       txId: "01e4dsa",
-      user: "johndoe",
-      date: "2021-09-01",
-      cost: "43.95",
+      user: "Droo",
+      date: "2023-09-02",
+      cost: "1,600",
     },
+    {
+      txId: "0315dsaa",
+      user: "Jan",
+      date: "2023-09-02",
+      cost: "600",
+    },
+    {
+      txId: "01e4dsa",
+      user: "Randee",
+      date: "2023-09-02",
+      cost: "420",
+    },
+];
+
+export const mockLine = [
+  {
+    id: "japan",
+    color: coloring("dark").lime[500],
+    data: [
+      {
+        x: "plane",
+        y: 101,
+      },
+      {
+        x: "helicopter",
+        y: 75,
+      },
+      {
+        x: "boat",
+        y: 36,
+      },
+      {
+        x: "train",
+        y: 216,
+      },
+      {
+        x: "subway",
+        y: 35,
+      },
+      {
+        x: "bus",
+        y: 236,
+      },
+      {
+        x: "car",
+        y: 88,
+      },
+      {
+        x: "moto",
+        y: 232,
+      },
+      {
+        x: "bicycle",
+        y: 281,
+      },
+      {
+        x: "horse",
+        y: 1,
+      },
+      {
+        x: "skateboard",
+        y: 35,
+      },
+      {
+        x: "others",
+        y: 14,
+      },
+    ],
+  },
+  {
+    id: "france",
+    color: coloring("dark").green[300],
+    data: [
+      {
+        x: "plane",
+        y: 212,
+      },
+      {
+        x: "helicopter",
+        y: 190,
+      },
+      {
+        x: "boat",
+        y: 270,
+      },
+      {
+        x: "train",
+        y: 9,
+      },
+      {
+        x: "subway",
+        y: 75,
+      },
+      {
+        x: "bus",
+        y: 175,
+      },
+      {
+        x: "car",
+        y: 33,
+      },
+      {
+        x: "moto",
+        y: 189,
+      },
+      {
+        x: "bicycle",
+        y: 97,
+      },
+      {
+        x: "horse",
+        y: 87,
+      },
+      {
+        x: "skateboard",
+        y: 299,
+      },
+      {
+        x: "others",
+        y: 251,
+      },
+    ],
+  },
 ];
 
 export const mockBar = [
@@ -28,7 +153,7 @@ export const mockBar = [
       "muesliColor": "hsl(229, 70%, 50%)",
       tapas: 96,
       tapasColor: "hsl(296, 70%, 50%)",
-      kebab: 72,
+      kebab: 72/2,
       kebabColor: "hsl(97, 70%, 50%)",
       pickles: 140,
       picklesColor: "hsl(340, 70%, 50%)",
