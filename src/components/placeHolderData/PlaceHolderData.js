@@ -71,7 +71,7 @@ export const mockPie = [
 
 const mockLineTemp = await fetch('https://svc.blockdaemon.com/reporting/staking/v1/ethereum/mainnet/periods/12', 
 [
-    ['Authorization','Bearer ']
+    ['Authorization','Bearer <BEARER>']
 ]  
 ).then((response) => response.json());
 

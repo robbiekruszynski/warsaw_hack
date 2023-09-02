@@ -1,7 +1,7 @@
 // import { coloring } from "../../GlobalTheme";
 
 // var mockLine = await fetch('https://svc.blockdaemon.com/reporting/staking/v1/ethereum/mainnet/periods/2', [
-//             ['Authorization','Bearer mTWZ46f2YRFkCbSA3AwIRpCoksF2K81zjEVdaZHLsFBv50Uu']
+//             ['Authorization','Bearer <BEARER>']
 //         ]  
 //     );
 
@@ -10,7 +10,7 @@
 // console.log(mockLine);
 export const trueLine = await fetch('https://svc.blockdaemon.com/reporting/staking/v1/ethereum/mainnet/periods/2', 
 [
-    ['Authorization','Bearer mTWZ46f2YRFkCbSA3AwIRpCoksF2K81zjEVdaZHLsFBv50Uu']
+    ['Authorization','Bearer <BEARER>']
 ]  
 ).then((data) => {
 console.log(data); // JSON data parsed by `data.json()` call
