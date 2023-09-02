@@ -12,6 +12,8 @@ import Geo from './components/data/Geo';
 import Cal from './components/data/Cal';
 import Concept from './components/Concept';
 import Invoice from './components/data/Invoice';
+import Insurance from "./components/Insurance";
+import Swap from "./components/Swap";
 
 function App() {
   const [isSidebar, setIsSidebar] = useState(true);
@@ -28,6 +30,8 @@ function App() {
           <Routes>
           <Route path="/"element = {<Dashboard/>} />
           <Route path="/concept"element = {<Concept/>} />
+          <Route path="/insurance"element = {<Insurance/>} />
+          <Route path="/swap"element = {<Swap/>} />
           <Route path="/invoice"element = {<Invoice/>}/>
           <Route path="/line"element = {<Line/>}/>
           <Route path="/bar"element = {<Bar/>}/>

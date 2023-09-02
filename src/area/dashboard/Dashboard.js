@@ -11,6 +11,7 @@ import Geo from "../../components/data/Geo";
 import Bar from "../../components/data/Bar";
 import Stat from "../../components/data/Stat";
 
+
 const Dashboard = () => {
   const theme = useTheme();
   const colors = coloring(theme.palette.mode);
