@@ -17,9 +17,9 @@ BLOCKS_PER_YEAR = 2_629_800
 WSTETH_CONTRACT = '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0'
 CP_ETH_CONTRACT = '0xc8A1F9461115EF3C1E84Da6515A88Ea49CA97660'
 CP_WSTETH_CONTRACT = '0xc9Bb81d3668f03ec9109bBca77d32423DeccF9Ab'
-with open('./abi/wsteth.json', 'r') as f:
+with open('python/abi/wsteth.json', 'r') as f:
     WSTETH_ABI = json.load(f)
-with open('./abi/CP_ORACLE.json', 'r') as f:
+with open('python/abi/CP_ORACLE.json', 'r') as f:
     ORACLE_ABI = json.load(f)
 
 def quote(n_days: int, n_vals: int, deductible_val: float = 0, deductible_type: str = 'eth'):
