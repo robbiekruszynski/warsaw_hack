@@ -5,6 +5,7 @@ import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import WalletConnect from "../components/Wallet";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -22,6 +23,7 @@ const Topbar = () => {
         <IconButton type="button" sx={{ p: 1 }}>
           <SearchIcon />
         </IconButton>
+        <WalletConnect/>
       </Box>
       
     </Box>
