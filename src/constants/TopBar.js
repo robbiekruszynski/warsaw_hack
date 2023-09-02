@@ -23,7 +23,15 @@ const Topbar = () => {
           <SearchIcon />
         </IconButton>
       </Box>
-      <Box display="flex">
+      
+    </Box>
+  );
+};
+
+export default Topbar;
+
+
+{/* <Box display="flex">
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (
             <DarkModeOutlinedIcon />
@@ -31,10 +39,4 @@ const Topbar = () => {
             <LightModeOutlinedIcon />
           )}
         </IconButton>
-      </Box>
-    </Box>
-    //fix the break occuring when switching to light and check on no primary naming conventions for color changes
-  );
-};
-
-export default Topbar;
+      </Box> */}

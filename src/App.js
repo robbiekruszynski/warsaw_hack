@@ -11,6 +11,7 @@ import Pie from './components/data/Pie';
 import Geo from './components/data/Geo';
 import Cal from './components/data/Cal';
 import Concept from './components/Concept';
+import Invoice from './components/data/Invoice';
 
 function App() {
   const [isSidebar, setIsSidebar] = useState(true);
@@ -27,6 +28,7 @@ function App() {
           <Routes>
           <Route path="/"element = {<Dashboard/>} />
           <Route path="/concept"element = {<Concept/>} />
+          <Route path="/invoice"element = {<Invoice/>}/>
           <Route path="/line"element = {<Line/>}/>
           <Route path="/bar"element = {<Bar/>}/>
           <Route path ='/Pie'element = {<Pie/>}/>

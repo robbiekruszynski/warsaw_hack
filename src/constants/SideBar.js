@@ -164,6 +164,13 @@ return (
             selected={selected}
             setSelected={setSelected}
           />
+            <Item
+            title="Invoice"
+            to="/invoice"
+            icon={<PieChartOutlineOutlinedIcon />}
+            selected={selected}
+            setSelected={setSelected}
+          />
           <Item
             title="Geo"
             to="/geo"
