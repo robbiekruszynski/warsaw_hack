@@ -1,8 +1,32 @@
 import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { coloring } from "../../GlobalTheme";
-// import { trueBar as data } from "../../components/placeHolderData/TrueData";
 import { mockLine as data } from"../../components/placeHolderData/PlaceHolderData";
+// import { mockLine as data } from "../../components/placeHolderData/TrueData";
+
+let dataTemp = [{
+  id: "Hold 1",
+  color: coloring("dark").lime[500],
+  data: [],
+}];
+
+console.log(data.length);
+
+for (let index = data.length - 1; index >= 0; index--) {
+// for (let index = 0; index < data.length; index++) {
+  console.log(data[index]);
+
+  let thisData = {
+      x: data[index]['periodStartTime'].substring(0,10), // periodStartTime for X 
+      y: data[index]['periodTotalReward'] / data[index]['periodTotalStake'] * 365 // Yield cal as periodTotalReward / periodTotalStake
+    };
+  dataTemp[0].data.push(thisData);
+  
+}
+console.log(dataTemp);
+
+// data = dataTemp;
+
 
 const Line = ({ isCustomLineColors = false, isDashboard = false }) => {
   const theme = useTheme();
@@ -10,7 +34,7 @@ const Line = ({ isCustomLineColors = false, isDashboard = false }) => {
 
   return (
     <ResponsiveLine
-      data={data}
+      data={dataTemp}
       theme={{
         axis: {
           domain: {

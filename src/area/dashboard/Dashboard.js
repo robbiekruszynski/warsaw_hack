@@ -10,7 +10,6 @@ import Line from "../../components/data/Line";
 import Geo from "../../components/data/Geo";
 import Bar from "../../components/data/Bar";
 import Stat from "../../components/data/Stat";
-import Pie from "../../components/data/Pie";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -132,37 +131,7 @@ const Dashboard = () => {
               >
               </Typography>
             </Box>
-            {trueLine.map((lineData, i) => (
-            <Box
-              key={`${lineData.periodStartTime}-${i}`}
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-              borderBottom={`4px solid ${colors.primary[500]}`}
-              p="15px"
-            >
-              <Box>
-                <Typography
-                  color={colors.lime[800]}
-                  variant="h5"
-                  fontWeight="600"
-                >
-                  {lineData.periodStartTime}
-                </Typography>
-                <Typography color={colors.gray[100]}>
-                  {lineData.period}
-                </Typography>
-              </Box>
-              <Box color={colors.gray[100]}>{lineData.periodStartBlock}</Box>
-              <Box
-                backgroundColor={colors.lime[300]}
-                p="5px 10px"
-                borderRadius="4px"
-              >
-                ${lineData.periodTotalStake}
-              </Box>
-            </Box>
-          ))}
+           
 
             <Box>
               <IconButton>
@@ -253,3 +222,36 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
+// {trueLine.map((lineData, i) => (
+//   <Box
+//     key={`${lineData.periodStartTime}-${i}`}
+//     display="flex"
+//     justifyContent="space-between"
+//     alignItems="center"
+//     borderBottom={`4px solid ${colors.primary[500]}`}
+//     p="15px"
+//   >
+//     <Box>
+//       <Typography
+//         color={colors.lime[800]}
+//         variant="h5"
+//         fontWeight="600"
+//       >
+//         {lineData.periodStartTime}
+//       </Typography>
+//       <Typography color={colors.gray[100]}>
+//         {lineData.period}
+//       </Typography>
+//     </Box>
+//     <Box color={colors.gray[100]}>{lineData.periodStartBlock}</Box>
+//     <Box
+//       backgroundColor={colors.lime[300]}
+//       p="5px 10px"
+//       borderRadius="4px"
+//     >
+//       ${lineData.periodTotalStake}
+//     </Box>
+//   </Box>
+// ))}

@@ -1,9 +1,9 @@
 const Concept = () => {
     return (
         <div>
-            <h1>
-                Concept Page 
-            </h1>
+            <p>
+                Goal of the project was
+            </p>
         </div>
     )
 }
