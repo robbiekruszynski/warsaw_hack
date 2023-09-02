@@ -5,7 +5,7 @@ import swap
 import oracle
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": ["http://localhost:3000"]}})
 
 @app.route('/calculate_insurance', methods=['POST'])
 def calculate_insurance():
