@@ -9,7 +9,6 @@ import Line from './components/data/Line';
 import Bar from './components/data/Bar';
 import Pie from './components/data/Pie';
 import Geo from './components/data/Geo';
-import Cal from './components/data/Cal';
 import Concept from './components/Concept';
 import Invoice from './components/data/Invoice';
 import Insurance from "./components/Insurance";
@@ -37,7 +36,6 @@ function App() {
           <Route path="/bar"element = {<Bar/>}/>
           <Route path ='/Pie'element = {<Pie/>}/>
           <Route path ='/Geo'element = {<Geo/>}/>
-          <Route path ='/Cal'element = {<Cal/>}/>
           </Routes>
         </main>
       </div>

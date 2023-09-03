@@ -150,13 +150,7 @@ return (
           >
             Data
           </Typography>
-          <Item
-            title="Cal"
-            to="/cal"
-            icon={<CalendarTodayOutlinedIcon />}
-            selected={selected}
-            setSelected={setSelected}
-          />
+        
           <Item
             title="Bar"
             to="/bar"
