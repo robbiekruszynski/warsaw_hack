@@ -1,4 +1,5 @@
-## An experimental [live deployment](https://valspin.netlify.app/).
+### An experimental [live deployment](https://valspin.netlify.app/).
+If there are render issues (this may be due to CORS) please try Firefox. 
 
 # Valspin at EthWarsaw
 
