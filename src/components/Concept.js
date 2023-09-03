@@ -3,7 +3,7 @@ import { coloring } from "../GlobalTheme";
 
 const Concept = () => {
     const theme = useTheme();
-    const colors = coloring(theme.palette.mode);
+    // const colors = coloring(theme.palette.mode);
     return (
         <Box>
             <Typography variant="h6" component="h4" gutterBottom padding={"50px 50px 50px 50px"}>

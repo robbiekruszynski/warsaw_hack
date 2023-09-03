@@ -15,7 +15,7 @@ import Insurance from "./components/Insurance";
 import Swap from "./components/Swap";
 
 function App() {
-  const [isSidebar, setIsSidebar] = useState(true);
+  const [isSidebar,] = useState(true);
   const [theme, colorMode] = useMode();
 
   return (

@@ -1,6 +1,6 @@
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { coloring } from "../../GlobalTheme";
-import { mockTransactions, trueLine, mockPie } from "../../components/placeHolderData/PlaceHolderData";
+import { mockTransactions } from "../../components/placeHolderData/PlaceHolderData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
@@ -10,7 +10,7 @@ import Line from "../../components/data/Line";
 import Geo from "../../components/data/Geo";
 import Bar from "../../components/data/Bar";
 import Stat from "../../components/data/Stat";
-import ReceiptIcon from '@mui/icons-material/Receipt';
+// import ReceiptIcon from '@mui/icons-material/Receipt';
 
 
 const Dashboard = () => {
@@ -226,35 +226,3 @@ const Dashboard = () => {
 
 export default Dashboard;
 
-
-// {trueLine.map((lineData, i) => (
-//   <Box
-//     key={`${lineData.periodStartTime}-${i}`}
-//     display="flex"
-//     justifyContent="space-between"
-//     alignItems="center"
-//     borderBottom={`4px solid ${colors.primary[500]}`}
-//     p="15px"
-//   >
-//     <Box>
-//       <Typography
-//         color={colors.lime[800]}
-//         variant="h5"
-//         fontWeight="600"
-//       >
-//         {lineData.periodStartTime}
-//       </Typography>
-//       <Typography color={colors.gray[100]}>
-//         {lineData.period}
-//       </Typography>
-//     </Box>
-//     <Box color={colors.gray[100]}>{lineData.periodStartBlock}</Box>
-//     <Box
-//       backgroundColor={colors.lime[300]}
-//       p="5px 10px"
-//       borderRadius="4px"
-//     >
-//       ${lineData.periodTotalStake}
-//     </Box>
-//   </Box>
-// ))}
