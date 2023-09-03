@@ -1,5 +1,6 @@
 ### An experimental [live deployment](https://valspin.netlify.app/).
 If there are render issues (this may be due to CORS) please try Firefox. 
+If CORS continues to be an issue, please deploy locally with guided instructions below.
 
 # Valspin at EthWarsaw
 
