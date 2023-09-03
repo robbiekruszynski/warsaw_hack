@@ -111,7 +111,7 @@ return (
                 fontWeight="bold"
                 sx={{ m: "10px 0 0 0" }}
               >
-                Big Yoshi
+                Valspin
               </Typography>
             </Box>
           </Box>

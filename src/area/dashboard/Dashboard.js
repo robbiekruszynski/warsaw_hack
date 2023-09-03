@@ -10,6 +10,7 @@ import Line from "../../components/data/Line";
 import Geo from "../../components/data/Geo";
 import Bar from "../../components/data/Bar";
 import Stat from "../../components/data/Stat";
+import ReceiptIcon from '@mui/icons-material/Receipt';
 
 
 const Dashboard = () => {
@@ -201,6 +202,7 @@ const Dashboard = () => {
 
         </Box>
         <Box
+          sx={{ m: "-10" }}
           gridColumn="span 12"
           gridRow="span 1"
           backgroundColor={colors.primary[400]}

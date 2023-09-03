@@ -14,6 +14,8 @@ import {
 
 import { mockInsurance } from"../components/placeHolderData/PlaceHolderData";
 
+import CreateInvoiceForm from '../components/requestInsuranceInvoice';
+
 function roundHackFix(value, decimals) {
 return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 }
@@ -108,6 +110,12 @@ const InsuranceReturn = () => {
               </TableBody>
             </Table>
           </TableContainer>
+
+
+            <CreateInvoiceForm></CreateInvoiceForm>
+            {/* <Button color="secondary" variant="contained" onClick={handleSubmit}>
+                Create Invoice
+            </Button> */}
         </>
       )}
     </Container>
