@@ -12,6 +12,8 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
+import PaymentsIcon from '@mui/icons-material/Payments';
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import bufficorn from "../assets/imgs/bufficorn.png";
 
 
@@ -131,14 +133,14 @@ return (
              <Item
             title="Insurance"
             to="/insurance"
-            icon={<HelpOutlineOutlinedIcon />}
+            icon={<PaymentsIcon />}
             selected={selected}
             setSelected={setSelected}
           />
              <Item
             title="Swap"
             to="/swap"
-            icon={<HelpOutlineOutlinedIcon />}
+            icon={<SwapHorizIcon />}
             selected={selected}
             setSelected={setSelected}
           />
