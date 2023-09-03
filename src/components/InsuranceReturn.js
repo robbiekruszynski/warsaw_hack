@@ -10,11 +10,12 @@ import {
   TableHead,
   TableRow,
   Paper,
+  Button,
 } from '@mui/material';
 
 import { mockInsurance } from"../components/placeHolderData/PlaceHolderData";
 
-import CreateInvoiceForm from '../components/requestInsuranceInvoice';
+// import CreateInvoiceForm from '../components/requestInsuranceInvoice';
 
 function roundHackFix(value, decimals) {
 return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
@@ -112,10 +113,10 @@ const InsuranceReturn = () => {
           </TableContainer>
 
 
-            <CreateInvoiceForm></CreateInvoiceForm>
-            {/* <Button color="secondary" variant="contained" onClick={handleSubmit}>
+           
+            <Button color="secondary" variant="contained">
                 Create Invoice
-            </Button> */}
+            </Button>
         </>
       )}
     </Container>

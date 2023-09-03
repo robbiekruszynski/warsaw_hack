@@ -39,8 +39,8 @@ const BarChart = ({ isDashboard = false }) => {
           },
         },
       }}
-      keys={["periodStartTime", "periodTotalReward", "periodTotalStake", "totalProtocolRewards",]}
-      indexBy="country"
+      keys={["1", "2", "3", "4", "5", "6"]}
+      indexBy="state"
       margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
       padding={0.3}
       valueScale={{ type: "linear" }}
@@ -76,7 +76,7 @@ const BarChart = ({ isDashboard = false }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "Time", 
+        legend: isDashboard ? undefined : "Time",
         legendPosition: "middle",
         legendOffset: 32,
       }}
@@ -84,7 +84,7 @@ const BarChart = ({ isDashboard = false }) => {
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: isDashboard ? undefined : "Yield", 
+        legend: isDashboard ? undefined : "Yield",
         legendPosition: "middle",
         legendOffset: -40,
       }}
