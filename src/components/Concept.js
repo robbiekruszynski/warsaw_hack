@@ -1,4 +1,4 @@
-import { Typography, Box, useTheme } from "@mui/material";
+import { Typography, Box, } from "@mui/material";
 // import { coloring } from "../GlobalTheme";
 
 const Concept = () => {
