@@ -34,10 +34,10 @@
       requestInfo: {
         currency: {
           type: Types.RequestLogic.CURRENCY.ERC20,
-          value: "0xBA62BCfcAaFc6622853cca2BE6Ac7d845BC0f2Dc",
+          value: "0xBA62BCfcAaFc6622853cca2BE6Ac7d845BC0f2Dc", //needs to be wrapped eth
           network: "goerli",
         },
-        expectedAmount: "1000000000000000000",
+        expectedAmount: "1000000000000000000", //needs to be swap policy cost x 18dec
         payee: {
           type: Types.Identity.TYPE.ETHEREUM_ADDRESS,
           value: payeeIdentity,
@@ -58,8 +58,8 @@
         },
       },
       contentData: {
-        reason: "🍕",
-        dueDate: "2023.06.16",
+        reason: "Cuase you owe it",
+        dueDate: "2023.09.02",
       },
       signer: {
         type: Types.Identity.TYPE.ETHEREUM_ADDRESS,
@@ -71,3 +71,5 @@
     const requestData = await request.waitForConfirmation();
     console.log(JSON.stringify(requestData));
   })();
+
+ 
