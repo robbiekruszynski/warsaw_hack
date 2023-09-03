@@ -75,3 +75,6 @@ Calculate value of an insurance contract
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"days": 100, "vals": 100, "deductible_amount": 1, "deductible_type": "eth"}' http://localhost:5000/calculate_insurance
 ```
+
+
+For some of the modelling work done, see `notebooks.html`
