@@ -6,6 +6,8 @@ import oracle
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": ["http://localhost:3000"]}})
+# CORS(app, origins="http://localhost:3000")  # Replace with your React app's URL
+
 
 @app.route('/calculate_insurance', methods=['POST'])
 def calculate_insurance():
