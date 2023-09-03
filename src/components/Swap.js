@@ -52,9 +52,9 @@ function Swap() {
         style={{ marginBottom: '20px', width: '100%' }}
       />
       <Button color="secondary" variant="contained" onClick={handleSubmit}>
-        Swap
+        Get Quote
       </Button>
-
+      
 
       <SwapReturn></SwapReturn>
     </div>

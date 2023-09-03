@@ -34,7 +34,7 @@
       requestInfo: {
         currency: {
           type: Types.RequestLogic.CURRENCY.ERC20,
-          value: "0xBA62BCfcAaFc6622853cca2BE6Ac7d845BC0f2Dc", //needs to be wrapped eth
+          value: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
           network: "goerli",
         },
         expectedAmount: "1000000000000000000", //needs to be swap policy cost x 18dec
@@ -58,7 +58,7 @@
         },
       },
       contentData: {
-        reason: "Cuase you owe it",
+        reason: "Owed Amount",
         dueDate: "2023.09.02",
       },
       signer: {
@@ -68,8 +68,9 @@
     };
   
     const request = await requestClient.createRequest(requestCreateParameters);
-    const requestData = await request.waitForConfirmation();
+    const requestData = await request.waitForConfirmation(); //attach to a button in 
     console.log(JSON.stringify(requestData));
   })();
 
+    
  

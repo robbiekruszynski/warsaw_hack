@@ -15,6 +15,8 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import PaymentsIcon from '@mui/icons-material/Payments';
 import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import bufficorn from "../assets/imgs/bufficorn.png";
+import ReceiptIcon from '@mui/icons-material/Receipt';
+
 
 
 
@@ -177,7 +179,7 @@ return (
             <Item
             title="Invoice"
             to="/invoice"
-            icon={<PieChartOutlineOutlinedIcon />}
+            icon={<ReceiptIcon />}
             selected={selected}
             setSelected={setSelected}
           />

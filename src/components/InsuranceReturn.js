@@ -11,8 +11,7 @@ import {
   TableRow,
   Paper,
 } from '@mui/material';
-// import mockSwaps from './placeHolderData';
-// import { mockSwaps } from"../../components/placeHolderData/PlaceHolderData";
+
 import { mockInsurance } from"../components/placeHolderData/PlaceHolderData";
 
 function roundHackFix(value, decimals) {
@@ -28,15 +27,6 @@ const InsuranceReturn = () => {
       // Simulated API call
       const apiData = mockInsurance;
       console.log(mockInsurance);
-
-    //   console.log(apiData);
-    //   for (let index = 0; index < apiData.policy.length; index++) {
-    //     apiData.policy[index] = roundHackFix(apiData.policy[index],3);
-    //     console.log(apiData.policy[index]);
-    //   }
-    //   for (let index = 0; index < apiData.returns.length; index++) {
-    //     apiData.returns[index] = roundHackFix(apiData.returns[index],3);
-    //   }
 
       setData(apiData);
     };
