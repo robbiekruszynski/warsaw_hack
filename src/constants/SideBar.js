@@ -192,11 +192,3 @@ return (
 
 export default SideBar;
 
-
-{/* <Item
-title="Geo"
-to="/geo"
-icon={<MapOutlinedIcon />}
-selected={selected}
-setSelected={setSelected}
-/> */}

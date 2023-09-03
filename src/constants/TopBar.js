@@ -10,7 +10,7 @@ import SearchIcon from "@mui/icons-material/Search";
 const Topbar = () => {
   const theme = useTheme();
   const colors = coloring(theme.palette.mode);
-  const colorMode = useContext(ColorModeContext);
+  // const colorMode = useContext(ColorModeContext);
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>

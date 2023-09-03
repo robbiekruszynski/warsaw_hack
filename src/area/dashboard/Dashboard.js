@@ -7,7 +7,7 @@ import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import Header from "../../components/Header";
 import Line from "../../components/data/Line";
-import Geo from "../../components/data/Geo";
+// import Geo from "../../components/data/Geo";
 import Bar from "../../components/data/Bar";
 import Stat from "../../components/data/Stat";
 // import ReceiptIcon from '@mui/icons-material/Receipt';

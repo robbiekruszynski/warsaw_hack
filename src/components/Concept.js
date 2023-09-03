@@ -1,8 +1,8 @@
 import { Typography, Box, useTheme } from "@mui/material";
-import { coloring } from "../GlobalTheme";
+// import { coloring } from "../GlobalTheme";
 
 const Concept = () => {
-    const theme = useTheme();
+    // const theme = useTheme();
     // const colors = coloring(theme.palette.mode);
     return (
         <Box>
