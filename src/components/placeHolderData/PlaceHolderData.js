@@ -3,6 +3,15 @@ import { coloring } from "../../GlobalTheme";
 // import 'dotenv/config'
 
 
+export const rate = await fetch('http://localhost:5000/get_rate', 
+{ 
+  method: 'GET',
+  headers: {
+    "Content-Type":'application/json',
+  },
+  redirect: 'follow'
+} 
+).then((response) => response.json());
 
 export const mockData = [
   {
@@ -99,6 +108,23 @@ export const mockSwaps = await fetch('http://localhost:5000/calculate_swap',
 } 
 ).then((response) => response.json());
 
+var rawInsurance = JSON.stringify({
+  "days": 100,
+  "vals": 100,
+  "deductible_amount": 0.5,
+  "deductible_type": 'eth'
+});
+
+export const mockInsurance = await fetch('http://localhost:5000/calculate_insurance', 
+{ 
+  method: 'POST',
+  headers: {
+    "Content-Type":'application/json',
+  },
+  body: rawInsurance,
+  redirect: 'follow'
+} 
+).then((response) => response.json());
 
 
 export const mockBar = [

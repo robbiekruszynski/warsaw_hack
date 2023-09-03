@@ -1,6 +1,7 @@
 
 // import Button from '@mui/material/Button';
 import SwapReturn from './SwapReturn';
+import { rate } from"../components/placeHolderData/PlaceHolderData";
 
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
@@ -33,6 +34,7 @@ function Swap() {
   return (
     <div style={{ padding: '20px' }}>
       <h1>Swap Interest Rate</h1>
+      <h3>30-day lagging APY: {rate.yield.toFixed(5)*100}%</h3>
       <TextField
         label="Number of Days"
         variant="outlined"

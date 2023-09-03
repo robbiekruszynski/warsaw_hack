@@ -1,4 +1,5 @@
 // import Button from '@mui/material/Button';
+import InsuranceReturn from './InsuranceReturn';
 
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
@@ -7,6 +8,8 @@ import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
+
+import { rate } from"../components/placeHolderData/PlaceHolderData";
 
 function Insurance() {
   const [formData, setFormData] = useState({
@@ -26,12 +29,14 @@ function Insurance() {
 
   const handleSubmit = () => {
     // Do something with the form data, e.g., send it to an API
+    document.getElementsByClassName("cheatcode")[0].style.display = 'block';
     console.log(formData);
   };
 
   return (
     <div style={{ padding: '20px' }}>
       <h1>Get Insurance Quote</h1>
+      <h3>30-day lagging APY: {rate.yield.toFixed(5)*100}%</h3>
       <TextField
         label="Number of Days"
         variant="outlined"
@@ -71,6 +76,8 @@ function Insurance() {
       <Button color="secondary" variant="contained" onClick={handleSubmit}>
         Get Quote
       </Button>
+
+      <InsuranceReturn></InsuranceReturn>
     </div>
   );
 }
