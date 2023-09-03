@@ -1,6 +1,8 @@
+## An experimental [live deployment](https://valspin.netlify.app/).
+
 # Valspin at EthWarsaw
 
-Valspin is an application that sells insurance contracts and swaps to guarantee fixed yields for sets of validators over fixed periods of time. An entity that owns several validators may desire to have a fixed return or one with a lower yield, hedging away the inherent stochastic rewards. It is quite difficult to get close to the average yield with only a small set of validators, as illustrated in the graph below showing the funds required for an adequate sample at various error margin levels. 
+Valspin is an application that sells insurance contracts and swaps to guarantee fixed yields for sets of validators over fixed periods of time. An entity that owns several validators may desire to have a fixed return or one with a lower yield, hedging away the inherent stochastic rewards. It is quite difficult to get close to the average yield with only a small set of validators, as illustrated in the graph below showing the funds required for an adequate sample at various error margin levels.
 
 <img src="src/assets/imgs/sampling.png" width="50%" />
 
@@ -49,12 +51,11 @@ npm i
 npm start
 ```
 
-#### Note on front end 
+#### Note on front end
 
-The concept moving beyong the MVP would be to further visualize the data being collected from Request and the custom API pulls. Ideally the user would be able to sign in and have full view of the wanted data along with have the ability to operate out of the Dapp as a standalone platform. 
+The concept moving beyong the MVP would be to further visualize the data being collected from Request and the custom API pulls. Ideally the user would be able to sign in and have full view of the wanted data along with have the ability to operate out of the Dapp as a standalone platform.
 
 The front end was build in house with a custom made theme implemented throughout the project utalizing MUI and NIVO.
-
 
 ### Sample Flask endpoints:
 
@@ -75,6 +76,5 @@ Calculate value of an insurance contract
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"days": 100, "vals": 100, "deductible_amount": 1, "deductible_type": "eth"}' http://localhost:5000/calculate_insurance
 ```
-
 
 For some of the modelling work done, see `notebooks.html`
