@@ -2,9 +2,9 @@
 const Concept = () => {
     return (
         <div>
-            <p>
-                Goal of the project was
-            </p>
+            <h2>
+                Fill in
+            </h2>
         </div>
     )
 }
